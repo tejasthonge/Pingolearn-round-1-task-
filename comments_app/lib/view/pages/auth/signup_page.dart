@@ -4,9 +4,7 @@ import 'package:comments_app/model/user_model.dart';
 import 'package:comments_app/view/pages/auth/login_page.dart';
 import 'package:comments_app/view/pages/home/comment_page.dart';
 import 'package:comments_app/widgets/app_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -52,7 +50,7 @@ class SignupPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               height: 40,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(14)),
@@ -61,7 +59,7 @@ class SignupPage extends StatelessWidget {
                 decoration: InputDecoration(
                     hintText: "Name",
                     hintStyle: GoogleFonts.poppins(color: Colors.black),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
                     border: InputBorder.none),
@@ -74,7 +72,7 @@ class SignupPage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               height: 40,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(14)),
@@ -83,7 +81,7 @@ class SignupPage extends StatelessWidget {
                 decoration: InputDecoration(
                     hintText: "Email",
                     hintStyle: GoogleFonts.poppins(color: Colors.black),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
                     border: InputBorder.none),
@@ -96,7 +94,7 @@ class SignupPage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               height: 40,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(14)),
@@ -105,7 +103,7 @@ class SignupPage extends StatelessWidget {
                 decoration: InputDecoration(
                     hintText: "Password",
                     hintStyle: GoogleFonts.poppins(color: Colors.black),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
                     border: InputBorder.none),
@@ -133,6 +131,7 @@ class SignupPage extends StatelessWidget {
                     name: _nameTEC.text.trim(),
                     email: _emailTEC.text.trim(),
                     password: _passwordTEC.text.trim()));
+            // ignore: use_build_context_synchronously
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(message)),
             );
@@ -144,7 +143,7 @@ class SignupPage extends StatelessWidget {
           }
         },
         child: Container(
-          margin: EdgeInsets.only(bottom: 6),
+          margin: const EdgeInsets.only(bottom: 6),
           alignment: Alignment.center,
           width: MediaQuery.of(context).size.width - 180,
           height: 50,

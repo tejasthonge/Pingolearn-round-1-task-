@@ -1,6 +1,6 @@
 import 'package:comments_app/controller/auth_controller.dart';
 import 'package:comments_app/core/theme/app_color.dart';
-import 'package:comments_app/model/user_model.dart';
+
 import 'package:comments_app/view/pages/auth/signup_page.dart';
 import 'package:comments_app/view/pages/home/comment_page.dart';
 import 'package:comments_app/widgets/app_bar.dart';
@@ -50,7 +50,7 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               height: 40,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(14)),
@@ -59,7 +59,7 @@ class LoginPage extends StatelessWidget {
                 decoration: InputDecoration(
                     hintText: "Email",
                     hintStyle: GoogleFonts.poppins(color: Colors.black),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
                     border: InputBorder.none),
@@ -72,7 +72,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               height: 40,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(14)),
@@ -81,7 +81,7 @@ class LoginPage extends StatelessWidget {
                 decoration: InputDecoration(
                     hintText: "Password",
                     hintStyle: GoogleFonts.poppins(color: Colors.black),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
                     border: InputBorder.none),
@@ -118,7 +118,7 @@ class LoginPage extends StatelessWidget {
           }
         },
         child: Container(
-          margin: EdgeInsets.only(bottom: 6),
+          margin: const EdgeInsets.only(bottom: 6),
           alignment: Alignment.center,
           width: MediaQuery.of(context).size.width - 180,
           height: 50,
