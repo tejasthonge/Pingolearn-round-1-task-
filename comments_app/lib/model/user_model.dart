@@ -3,7 +3,6 @@ class UserModel {
   String email;
   String password;
 
-
   UserModel({
     required this.name,
     required this.email,
@@ -17,7 +16,6 @@ class UserModel {
       'password': password,
     };
   }
-
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(

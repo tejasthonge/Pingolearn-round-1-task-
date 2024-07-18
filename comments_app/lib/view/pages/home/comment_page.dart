@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 
 class CommentsPage extends StatelessWidget {
@@ -8,8 +5,6 @@ class CommentsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      
-    );
+    return Scaffold();
   }
 }

@@ -2,6 +2,7 @@ import 'package:comments_app/controller/auth_controller.dart';
 import 'package:comments_app/core/theme/app_color.dart';
 import 'package:comments_app/model/user_model.dart';
 import 'package:comments_app/view/pages/auth/login_page.dart';
+import 'package:comments_app/view/pages/home/comment_page.dart';
 import 'package:comments_app/widgets/app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -122,36 +123,43 @@ class SignupPage extends StatelessWidget {
   }
 
   Widget _signUpButtonWidget({required BuildContext context}) {
-    return Consumer<AuthController>(
-      builder: (context,userController,child) {
-        return InkWell(
-          
-          onTap: ()async {
-            if(_formKey.currentState!.validate()){
-              String message = await userController.createUser(context: context,  user: UserModel(name: _nameTEC.text.trim(), email: _emailTEC.text.trim(), password: _passwordTEC.text.trim()));
+    return Consumer<AuthController>(builder: (context, userController, child) {
+      return InkWell(
+        onTap: () async {
+          if (_formKey.currentState!.validate()) {
+            String message = await userController.createUser(
+                context: context,
+                user: UserModel(
+                    name: _nameTEC.text.trim(),
+                    email: _emailTEC.text.trim(),
+                    password: _passwordTEC.text.trim()));
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(message)),
-            ); 
+            );
+            if (message == 'User created successfully.') {
+              Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (_) => CommentsPage()),
+                  (route) => false);
             }
-          },
-          child: Container(
-            margin: EdgeInsets.only(bottom: 6),
-            alignment: Alignment.center,
-            width: MediaQuery.of(context).size.width - 180,
-            height: 50,
-            decoration: BoxDecoration(
-              color: AppColor.blue,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Text(
-              "Signup",
-              style: GoogleFonts.poppins(
-                  fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),
-            ),
+          }
+        },
+        child: Container(
+          margin: EdgeInsets.only(bottom: 6),
+          alignment: Alignment.center,
+          width: MediaQuery.of(context).size.width - 180,
+          height: 50,
+          decoration: BoxDecoration(
+            color: AppColor.blue,
+            borderRadius: BorderRadius.circular(10),
           ),
-        );
-      }
-    );
+          child: Text(
+            "Signup",
+            style: GoogleFonts.poppins(
+                fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),
+          ),
+        ),
+      );
+    });
   }
 
   Widget _haveAccountWidget({required BuildContext context}) {
