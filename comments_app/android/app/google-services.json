@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "969009672530",
+    "project_id": "pingolearn-task--comments-app",
+    "storage_bucket": "pingolearn-task--comments-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969009672530:android:37c328a939e4d04e2b0a8b",
+        "android_client_info": {
+          "package_name": "com.example.comments_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1TBwzwnn7KcJ_q4lqHDnS7wJEjnpAEhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
