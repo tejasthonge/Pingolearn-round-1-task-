@@ -137,7 +137,7 @@ class SignupPage extends StatelessWidget {
             );
             if (message == 'User created successfully.') {
               Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute(builder: (_) => CommentsPage()),
+                  MaterialPageRoute(builder: (_) => LoginPage()),
                   (route) => false);
             }
           }
